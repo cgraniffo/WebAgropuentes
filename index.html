@@ -184,10 +184,19 @@
     }
 
     .hero-phrase {
-      font-size: 0.95rem;
+      font-size: 0.99rem;
       color: var(--text-muted);
       font-style: italic;
       margin-bottom: 1.4rem;
+    }
+
+    .hero-emotion {
+      font-size: 1.05rem;
+      color: var(--green-main);
+      margin-bottom: 1rem;
+      font-weight: 500;
+      line-height: 1.55;
+      max-width: 560px;
     }
 
     .hero-buttons {
@@ -321,6 +330,21 @@
       font-size: 0.9rem;
       color: #ffffff;
     }
+
+    .impact-image {
+      margin-top: 1.5rem;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.18);
+      background: #CDE9D9;
+    }
+
+    .impact-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
 
     .card-soft strong {
       display: block;
@@ -720,16 +744,29 @@
   <div class="page">
 
     <!-- HERO BANNER SUPERIOR (PASTILLA) -->
-    <section class="hero-banner">
+    <section class="hero-banner" aria-labelledby="hero-main-title">
       <div class="hero-banner-inner">
-        <div class="hero-banner-line-1">
-          Agropuentes: orden y claridad en la gestión de tu campo
+        
+        <div class="hero-banner-left">
+          <span class="hero-banner-tag">Modelo de Impacto</span>
+          <h1 id="hero-main-title" class="hero-banner-line-1">
+            Agropuentes: impacto doble para el mundo agrícola
+          </h1>
+          <p class="hero-banner-line-2">
+            Orden para agricultores. Trabajo digno para consultores senior con experiencia. Un puente que genera valor social en cada proyecto.
+          </p>
         </div>
-        <div class="hero-banner-line-2">
-          Acompañamiento agrícola para ordenar dolores de gestión reales de tu campo.
+
+        <div class="hero-banner-right">
+          <a class="hero-banner-cta" href="#impacto">
+            Ver propósito
+          </a>
         </div>
+
       </div>
     </section>
+
+
 
     <!-- HERO PRINCIPAL -->
     <header class="hero">
@@ -737,6 +774,7 @@
         <div class="nav">
           <div class="nav-links">
             <a href="#que-es">¿Qué es Agropuentes?</a>
+            <a href="#impacto">Impacto</a>
             <a href="#como-funciona">¿Cómo funciona?</a>
             <a href="#dolores">Tus Dolores</a>
             <a href="#consultores">Consultores senior</a>
@@ -753,12 +791,15 @@
           <div>
             <div class="hero-kicker">Acompañamiento agrícola con propósito</div>
             <h1 class="hero-title">Ordena tu campo con acompañamiento experto</h1>
+            <p class="hero-emotion">
+              Transformar la gestión agrícola transforma vidas, y la experiencia senior es el puente que vuelve esa transformación real.
+            </p>
             <p class="hero-subtitle">
               Durante 30 días trabajamos contigo para ordenar un dolor real de tu operación agrícola,
               combinando la experiencia de consultores senior y herramientas simples que funcionan en terreno.
             </p>
             <p class="hero-phrase">
-              Un agricultor y un consultor senior. Dos mundos que se necesitan.
+              Un agricultor y un consultor senior. Dos mundos que se necesitan y que se complementan.
             </p>
 
             <div class="hero-buttons">
@@ -808,6 +849,53 @@
             costos, robos o compras desordenadas, no partimos hablando de software, partimos hablando de tu realidad.
           </p>
         </div>
+
+      </div>
+    </section>
+
+        <!-- SECCIÓN IMPACTO -->
+
+    <section id="impacto" class="section-card fade-on-scroll">
+      <div class="container">
+
+        <span class="pill">SInergias Agricultor + Consultor Senior</span>
+        <h2 class="section-title">Nuestro impacto</h2>
+
+        <p class="section-sub">
+          Agropuentes nace para resolver dos desafíos sociales que hoy permanecen invisibles: la vulnerabilidad operativa de agricultores pequeños y medianos, y la subutilización del talento senior con décadas de experiencia en gestión y transformación digital.
+        </p>
+
+        <div class="two-cols">
+          <div>
+            <h3 style="margin-bottom:0.4rem; font-size:1.1rem;">Agricultores vulnerables al desorden operativo</h3>
+            <p style="margin-bottom:1rem;">
+              En Chile, miles de agricultores enfrentan una carga diaria que erosiona su productividad: falta de claridad en inventarios, tareas, costos y decisiones urgentes que dependen de la memoria o del WhatsApp. Un desorden que les resta competitividad y calidad de vida.
+            </p>
+
+            <h3 style="margin-bottom:0.4rem; font-size:1.1rem;">Consultores senior subutilizados</h3>
+            <p style="margin-bottom:1rem;">
+              Profesionales +50 con experiencia profunda en gestión, procesos y tecnologías están fuera del mercado por sesgos etarios o modelos laborales rígidos. Un capital intelectual que Chile no puede seguir perdiendo.
+            </p>
+          </div>
+
+          <div class="card-soft">
+            <strong>Impacto doble</strong>
+            <p style="margin-top:0.3rem;">
+              Cada proyecto de Agropuentes une necesidad y experiencia:  
+              <br>• El agricultor recupera orden, claridad y capacidad de decidir.  
+              <br>• El consultor senior encuentra un espacio digno para aportar su conocimiento.  
+              <br>• La comunidad agrícola gana productividad y resiliencia.  
+            </p>
+          </div>
+        </div>
+
+        <p class="section-note">
+          Este modelo aspira a convertirse en puente real, articulado con actores públicos y privados para impulsar desarrollo rural, empleo digno senior y tecnología con propósito.
+        </p>
+            <div class="impact-image">
+              <img src="images/agricultor_consultor.png"
+                  alt="Agricultor y consultor senior trabajando juntos en el campo">
+            </div>
 
       </div>
     </section>

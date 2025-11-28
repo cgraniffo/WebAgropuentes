@@ -2,20 +2,46 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Agropuentes – Orden y claridad para tu campo</title>
+  <title>Agropuentes – Transformación Digital con Impacto Social</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Piloto de 30 días para ordenar un dolor real de tu campo con acompañamiento agrícola humano, consultores senior y herramientas simples que funcionan en terreno.">
+  <meta name="description" content="Conectamos la brecha digital del agro con la experiencia de consultores senior. Un modelo de innovación social para modernizar el campo chileno.">
+
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'agropuentes-green': '#285848',
+            'agropuentes-dark': '#1F3B2B',
+            'agropuentes-light': '#F6F6F6',
+            'agropuentes-accent': '#10B981',
+            'agropuentes-gold': '#D97706',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
   <style>
     :root {
-      --green-main: #006C47;
-      --green-main-dark: #004f34;
-      --green-light: #DFF8EB;
-      --gray-bg: #F5F5F5;
+      --green-main: #285848;
+      --green-hover: #1F3B2B;
+      --gold-accent: #D97706;
       --page-bg: #EEF3F0;
       --text-main: #222222;
       --text-muted: #666666;
@@ -24,1103 +50,393 @@
       --shadow-soft: 0 18px 45px rgba(14,40,26,0.08);
     }
 
-    html { scroll-behavior: smooth; }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    html { 
+      scroll-behavior: smooth; 
+      /* ESTA ES LA MAGIA: */
+      /* Le decimos que deje un "aire" de 140px arriba al hacer scroll */
+      /* Así la barra gigante no tapa el título */
+      scroll-padding-top: 140px; 
     }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       background: var(--page-bg);
       color: var(--text-main);
       line-height: 1.6;
     }
 
-    img { max-width: 100%; display: block; }
-    a { text-decoration: none; }
+    /* Utilitarios */
+    .container { max-width: var(--max-width); margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+    
+    header, section, footer { padding: 3rem 0; }
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header, section, footer {
-      padding: 3rem 1.5rem;
-    }
-
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-
-    /* ================= NAV ================= */
-
-    .nav {
-      position: static !important;   /* 🔹 fuerza menu NO sticky */
-      top: auto !important;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .logo img {
-      height: 34px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      font-size: 0.9rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .nav-links a {
-      color: var(--text-main);
-      opacity: 0.8;
-      transition: color 0.2s ease, opacity 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--green-main);
-      opacity: 1;
-    }
-
+    /* Estilos del CTA del Menú */
     .nav-cta {
-      border-radius: 999px;
-      border: 1px solid var(--green-main);
-      color: var(--green-main);
-      padding: 0.45rem 0.95rem;
-      font-size: 0.9rem;
-      background: #ffffff;
+      border-radius: 99px; border: 1px solid var(--green-main);
+      color: var(--green-main); font-weight: 500;
+      background: white; transition: 0.2s;
       white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-      transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
     }
+    .nav-cta:hover { background: var(--green-main); color: white; }
 
-    .nav-cta:hover {
-      background: var(--green-main);
-      color: #ffffff;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    }
-
-    /* HERO BANNER SUPERIOR – VERSIÓN COLOR */
-    .hero-banner {
-      padding: 1.8rem 1.5rem 1.2rem;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-banner-inner {
-      max-width: var(--max-width);
-      width: 100%;
-      background: #4b755d;
-      border-radius: 12px;
-      box-shadow: var(--shadow-soft);
-      padding: 1.1rem 2.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      font-size: 0.9rem;
-      animation: fadeUp 0.6s ease-out both;
-    }
-
-    .hero-banner-line-1 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #eaeceb;
-    }
-
-    .hero-banner-line-2 {
-      font-size: 0.95rem;
-      color: #eaeceb;
-    }
-
-    /* =============== HERO PRINCIPAL =============== */
-
-    .hero { padding-top: 0; }
-
+    /* ================= HERO ================= */
     .hero .container {
-      background: #ffffff;
-      border-radius: var(--radius-large);
-      padding: 2.5rem 2.25rem 2.75rem;
-      box-shadow: var(--shadow-soft);
-      animation: fadeUp 0.7s ease-out 0.08s both;
-    }
-
-    .hero-grid {
-      display: grid;
-      gap: 2.5rem;
-      align-items: center;
+      background: #ffffff; border-radius: var(--radius-large);
+      padding: 2.5rem 2.5rem 3rem; box-shadow: var(--shadow-soft);
+      animation: fadeUp 0.8s ease-out both;
     }
 
     .hero-kicker {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--green-main);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--gold-accent); font-weight: 700; margin-bottom: 0.5rem;
     }
 
     .hero-title {
-      font-family: 'Poppins', system-ui;
-      font-size: 2.3rem;
-      margin-bottom: 0.75rem;
+      font-family: 'Poppins', sans-serif; font-size: 2.5rem; line-height: 1.2;
+      margin-bottom: 1rem; color: #111;
     }
 
     .hero-subtitle {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      max-width: 560px;
-    }
-
-    .hero-phrase {
-      font-size: 0.99rem;
-      color: var(--text-muted);
-      font-style: italic;
-      margin-bottom: 1.4rem;
-    }
-
-    .hero-emotion {
-      font-size: 1.05rem;
-      color: var(--green-main);
-      margin-bottom: 1rem;
-      font-weight: 500;
-      line-height: 1.55;
-      max-width: 560px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .btn-primary,
-    .btn-secondary,
-    .btn-cta-final {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      padding: 0.85rem 1.4rem;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, color 0.12s ease;
-      text-align: center;
-      white-space: nowrap;
+      font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem;
+      max-width: 580px;
     }
 
     .btn-primary {
-      background: var(--green-main);
-      color: #ffffff;
-      box-shadow: 0 12px 26px rgba(0,79,52,0.35);
+      background: var(--green-main); color: white; padding: 0.9rem 1.8rem;
+      border-radius: 99px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: all 0.2s; box-shadow: 0 10px 20px rgba(40, 88, 72, 0.2);
     }
-
-    .btn-primary:hover {
-      background: var(--green-main-dark);
-      transform: translateY(-1px);
-      box-shadow: 0 16px 32px rgba(0,79,52,0.45);
-    }
+    .btn-primary:hover { transform: translateY(-2px); background: var(--green-hover); }
 
     .btn-secondary {
-      background: #ffffff;
-      color: var(--green-main);
-      border: 1px solid rgba(0,108,71,0.25);
+      background: white; color: var(--text-main); border: 1px solid #ddd;
+      padding: 0.9rem 1.8rem; border-radius: 99px; font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--green-main); color: var(--green-main); }
+
+    /* ================= SECCIONES ================= */
+    .section-card .container {
+      background: white; border-radius: var(--radius-large);
+      padding: 3rem 2.5rem; box-shadow: var(--shadow-soft);
     }
 
-    .btn-secondary:hover {
-      background: var(--green-light);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.12);
-      transform: translateY(-1px);
-    }
-
-    .hero-note {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .hero-image {
-      border-radius: 1.3rem;
-      overflow: hidden;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-      background: #f0f5f3;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    /* =============== SECCIONES GENÉRICAS =============== */
-
-    .section-card .container,
-    .two-worlds .container,
-    .consultants .container {
-      background: #ffffff;
-      border-radius: var(--radius-large);
-      padding: 2.5rem 2.25rem;
-      box-shadow: var(--shadow-soft);
-      animation: fadeUp 0.7s ease-out both;
+    .pill {
+      display: inline-block; font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--green-main); background: #EAF5F0;
+      padding: 0.4rem 1rem; border-radius: 99px; margin-bottom: 1rem; font-weight: 700;
     }
 
     .section-title {
-      font-family: 'Poppins', system-ui;
-      font-size: 1.6rem;
-      margin-bottom: 0.75rem;
+      font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-bottom: 1rem; color: #111;
     }
+    
+    .section-sub { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 700px; }
 
-    .section-sub {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      max-width: 650px;
+    /* ================= TARJETAS MODELO SOCIAL ================= */
+    .social-card {
+      border: 1px solid #eee; border-radius: 16px; padding: 2rem;
+      position: relative; overflow: hidden; transition: transform 0.3s;
     }
-
-    /* =============== DOS MUNDOS =============== */
-
-    .pill {
-      display: inline-block;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--green-main);
-      background: #eef3f1;
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      margin-bottom: 0.9rem;
-      font-weight: 600;
-    }
-
-    .two-cols {
-      display: grid;
-      gap: 2rem;
-    }
-
-    .two-cols-text p {
-      margin-bottom: 0.9rem;
-      font-size: 0.95rem;
-    }
-
-    .two-cols-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-    }
-
-    .card-soft {
-      background: #2D4638;
-      border-radius: 0.9rem;
-      border: 1px solid #E5E5E5;
-      padding: 1rem 1.1rem;
-      font-size: 0.9rem;
-      color: #ffffff;
-    }
-
-    .impact-image {
-      margin-top: 1.5rem;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 14px 32px rgba(0,0,0,0.18);
-      background: #CDE9D9;
-    }
-
-    .impact-image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-
-    .card-soft strong {
-      display: block;
-      margin-bottom: 0.35rem;
-    }
-
-    /* =============== CÓMO FUNCIONA =============== */
-
-    .steps-grid {
-      display: grid;
-      gap: 1.3rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .step-card {
-      border-radius: 1rem;
-      border: 1px solid #2D4638;
-      padding: 1.1rem 1.1rem 1.2rem;
-      font-size: 0.9rem;
-      background: linear-gradient(135deg, #355642, #234032);
-      color: #ffffff;
-    }
-
-    .step-number {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: #ffffff;
-      color: #234032;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-    }
-
-    .step-title {
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .section-note {
-      margin-top: 0.8rem;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* =============== DOLORES =============== */
-
-    .pains-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .pain-card {
-      border-radius: 1rem;
-      border: 1px solid #2D4638;
-      padding: 1.1rem 1.1rem 1.2rem;
-      font-size: 0.9rem;
-      background: linear-gradient(135deg, #355642, #234032);
-      color: #ffffff;
-    }
-
-    .pain-title {
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .pains-footer {
-      margin-top: 1.1rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    /* =============== CONSULTORES =============== */
-
-    .consultants-grid {
-      display: grid;
-      gap: 1.6rem;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      align-items: center;
-    }
-
-    .list-check {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 0.5rem;
-    }
-
-    .list-check li {
-      position: relative;
-      padding-left: 1.2rem;
-      margin-bottom: 0.45rem;
-      font-size: 0.9rem;
-    }
-
-    .list-check li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--green-main);
-      font-size: 1rem;
-      line-height: 1;
-    }
-
-    .impact-note {
-      font-size: 0.87rem;
-      color: var(--text-muted);
-      margin-top: 0.9rem;
-    }
-
-    .fake-photo {
-      border-radius: 1rem;
-      overflow: hidden;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.16);
-      background: #CDE9D9;
-      min-height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .fake-photo img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    /* =============== POR QUÉ / ES PARA TI =============== */
-
-    .three-cols {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    }
-
-    .why-card {
-      border-radius: 1rem;
-      border: 1px solid #2D4638;
-      padding: 1.1rem 1.1rem 1.2rem;
-      font-size: 0.9rem;
-      background: linear-gradient(135deg, #355642, #234032);
-      color: #ffffff;
-    }
-
-    .why-card h4 {
-      margin-bottom: 0.35rem;
-      font-size: 0.95rem;
-    }
-
-    .two-cols-split {
-      display: grid;
-      gap: 1.2rem;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      margin-top: 0.8rem;
-    }
-
-    .panel {
-      border-radius: 0.9rem;
-      border: 1px solid #E3E3E3;
-      color: #FFFFFF;
-      padding: 1rem 1.05rem;
-      font-size: 0.9rem;
-      background: linear-gradient(135deg, #355642, #234032);
-    }
-
-    .panel h4 {
-      margin-bottom: 0.45rem;
-      font-size: 0.95rem;
-    }
-
-    .panel ul { padding-left: 1.1rem; }
-    .panel li { margin-bottom: 0.3rem; }
-
-    /* =============== CTA FINAL =============== */
-
-    .cta-final {
-      background: var(--green-main);
-      color: #ffffff;
-      text-align: center;
-      padding: 3.2rem 1.5rem;
-    }
-
-    .cta-final-title {
-      font-family: 'Poppins', system-ui;
-      font-size: 1.7rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .cta-final-text {
-      font-size: 0.96rem;
-      margin-bottom: 1.6rem;
-      max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn-cta-final {
-      border-radius: 1rem;
-      border: 1px solid #2D4638;
-      padding: 1.1rem 1.1rem 1.2rem;
-      font-size: 0.9rem;
-      background: linear-gradient(135deg, #355642, #234032);
-      color: #ffffff;
-    }
-
-    .btn-cta-final:hover {
-      background: #F5FFF9;
-      box-shadow: 0 16px 32px rgba(0,0,0,0.35);
-      transform: translateY(-1px);
-    }
-
-    /* =============== FOOTER =============== */
-
-    footer {
-      background: #fafafa;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    footer .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1.4rem 0;
-    }
-
-    /* =============== ANIMACIONES =============== */
-
+    .social-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    
+    /* ================= ANIMACIONES ================= */
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(14px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
+    .fade-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
-    .fade-on-scroll {
-      opacity: 0;
-      transform: translateY(18px);
+    /* Mobile Tweaks */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2rem; }
+      .hero .container, .section-card .container { padding: 1.5rem; }
     }
-
-    .fade-on-scroll.visible {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    /* ===== Bloque "¿Qué es Agropuentes?" con más vida ===== */
-
-    .que-es-section .container {
-      position: relative;
-      overflow: hidden;
-      background: radial-gradient(circle at top left, #EAF7F1 0, #FFFFFF 55%);
-      border-radius: 24px;
-    }
-
-    .que-es-section .container::before {
-      content: "";
-      position: absolute;
-      top: -80px;
-      right: -80px;
-      width: 220px;
-      height: 220px;
-      background: radial-gradient(circle, rgba(0,108,71,0.14) 0, transparent 60%);
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .que-es-pill {
-      display: inline-block;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--green-main-dark);
-      background: rgba(223, 248, 235, 0.85);
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      margin-bottom: 0.9rem;
-      font-weight: 600;
-    }
-
-    .section-title--accent {
-      position: relative;
-      padding-bottom: 0.3rem;
-      margin-bottom: 0.85rem;
-    }
-
-    .section-title--accent::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 86px;
-      height: 3px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--green-main), rgba(0,108,71,0.1));
-    }
-
-    .que-es-text {
-      font-size: 0.98rem;
-      line-height: 1.7;
-    }
-
-    /* 🔥 NUEVO: layout 2 columnas + imagen lateral en "¿Qué es Agropuentes?" */
-
-    .que-es-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      align-items: center;
-      gap: 2.5rem;
-    }
-
-    .que-es-side-image {
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 12px 34px rgba(0,0,0,0.18);
-    }
-
-    .que-es-side-image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    /* =============== RESPONSIVE =============== */
-
-    @media (min-width: 960px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-      }
-    }
-
-    @media (max-width: 799px) {
-      header, section, footer {
-        padding: 2.4rem 1.1rem;
-      }
-
-      .hero .container,
-      .section-card .container,
-      .two-worlds .container,
-      .consultants .container {
-        padding: 2.1rem 1.4rem 2.3rem;
-        border-radius: 16px;
-      }
-
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-cta { align-self: flex-start; }
-
-      .hero-title { font-size: 1.9rem; }
-
-      .hero-banner-inner {
-        padding: 0.8rem 1.2rem;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        width: 100%;
-        justify-content: center;
-      }
-
-      /* 🔥 Ajuste mobile para el bloque ¿Qué es...? */
-      .que-es-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .que-es-side-image {
-        margin-top: 1.4rem;
-      }
-    }
-</style>
-
-<!-- Favicon -->
-<link rel="icon" href="images/favicon.ico" />
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
-<link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
-
-
-
-
+  </style>
 </head>
 <body>
+
   <div class="page">
 
-    <!-- HERO BANNER SUPERIOR (PASTILLA) -->
-    <section class="hero-banner" aria-labelledby="hero-main-title">
-      <div class="hero-banner-inner">
+    <div class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all">
+      <div class="container" style="padding-top: 0.8rem; padding-bottom: 0.8rem;">
         
-        <div class="hero-banner-left">
-          <span class="hero-banner-tag">Modelo de Impacto</span>
-          <h1 id="hero-main-title" class="hero-banner-line-1">
-            Agropuentes: impacto doble para el mundo agrícola
-          </h1>
-          <p class="hero-banner-line-2">
-            Orden para agricultores. Trabajo digno para consultores senior con experiencia. Un puente que genera valor social en cada proyecto.
-          </p>
-        </div>
+        <nav class="flex items-center justify-between"> 
+          
+        <div class="flex items-center">
+             <a href="#inicio" class="block">
+               <img src="images/logo.png" alt="Agropuentes" class="h-28 md:h-24 w-auto object-contain">
+             </a>
+          </div> 
 
-        <div class="hero-banner-right">
-          <a class="hero-banner-cta" href="#impacto">
-            Ver propósito
+          <div class="hidden md:flex gap-6 text-sm font-medium">
+            <a href="#modelo-social" class="hover:text-agropuentes-green transition-colors">Modelo Social</a>
+            <a href="#como-funciona" class="hover:text-agropuentes-green transition-colors">Metodología</a>
+            <a href="#expertos" class="hover:text-agropuentes-green transition-colors">Red de Expertos</a>
+            <a href="#dolores" class="hover:text-agropuentes-green transition-colors">Dolores</a>
+          </div>
+
+          <a class="nav-cta text-xs md:text-sm px-3 py-2 md:px-5 md:py-2" href="https://wa.me/56944645774?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20saber%20m%C3%A1s" target="_blank">
+            Hablemos 📱
           </a>
-        </div>
+
+        </nav>
 
       </div>
-    </section>
+    </div>
 
 
-
-    <!-- HERO PRINCIPAL -->
-    <header class="hero">
+    <header class="hero" id="inicio" style="margin-top: 1rem;">
       <div class="container">
-        <div class="nav">
-          <div class="nav-links">
-            <a href="#que-es">¿Qué es Agropuentes?</a>
-            <a href="#impacto">Impacto</a>
-            <a href="#como-funciona">¿Cómo funciona?</a>
-            <a href="#dolores">Tus Dolores</a>
-            <a href="#consultores">Consultores senior</a>
-            <a href="#porque">¿Por qué?</a>
-            <a href="#es-para-ti">¿Es para ti?</a>
-          </div>
-
-          <a class="nav-cta" href="https://wa.me/56944645774?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20de%20Agropuentes" target="_blank" rel="noopener">
-            Hablemos
-          </a>
-        </div>
-
-        <div class="hero-grid">
-          <div>
-            <div class="hero-kicker">Acompañamiento agrícola con propósito</div>
-            <h1 class="hero-title">Ordena tu campo con acompañamiento experto</h1>
-            <p class="hero-emotion">
-              Transformar la gestión agrícola transforma vidas, y la experiencia senior es el puente que vuelve esa transformación real.
-            </p>
+        
+        <div class="flex flex-col lg:flex-row gap-12 items-center mt-2">
+          <div class="flex-1">
+            <div class="hero-kicker">Innovación Social + Agrícola</div>
+            <h1 class="hero-title">
+              Transformación Digital <br>
+              <span class="text-agropuentes-green">con Rostro Humano</span>
+            </h1>
             <p class="hero-subtitle">
-              Durante 30 días trabajamos contigo para ordenar un dolor real de tu operación agrícola,
-              combinando la experiencia de consultores senior y herramientas simples que funcionan en terreno.
+              Agropuentes es el nexo entre dos mundos que se necesitan. Conectamos a <strong>agricultores</strong> que requieren modernizarse con <strong>expertos senior</strong> en transformación digital que buscan un propósito.
             </p>
-            <p class="hero-phrase">
-              Un agricultor y un consultor senior. Dos mundos que se necesitan y que se complementan.
-            </p>
-
-            <div class="hero-buttons">
-              <a class="btn-primary" href="https://wa.me/56944645774?text=Hola%2C%20quiero%20ordenar%20mi%20campo%20con%20Agropuentes" target="_blank" rel="noopener">
-                💬 Quiero ordenar mi campo
+            
+            <div class="flex flex-wrap gap-4">
+              <a class="btn-primary" href="https://wa.me/56944645774?text=Hola%2C%20quiero%20digitalizar%20mi%20campo" target="_blank">
+                🚀 Quiero digitalizar mi campo
               </a>
-              <a class="btn-secondary" href="#como-funciona">
-                Ver cómo funciona
+              <a class="btn-secondary" href="#modelo-social">
+                Entender el modelo
               </a>
             </div>
-
-            <div class="hero-note">
-              Empezamos por una sola cosa: el dolor que hoy más te complica.
+            
+            <div class="mt-6 flex items-center gap-3 text-sm text-gray-500">
+              <span class="flex -space-x-2">
+                <div class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-xs text-white font-bold">A</div>
+                <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-white flex items-center justify-center text-xs text-white font-bold">B</div>
+                <div class="w-8 h-8 rounded-full bg-agropuentes-green border-2 border-white flex items-center justify-center text-xs text-white font-bold">+</div>
+              </span>
+              <span>Únete a agricultores y consultores generando impacto.</span>
             </div>
           </div>
 
-          <div class="hero-image">
-            <img src="images/agricultor_consultor.png" alt="Agricultor y consultor de Agropuentes">
+          <div class="flex-1 w-full max-w-md">
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <h3 class="font-bold text-gray-800 mb-4">¿Qué logramos juntos?</h3>
+              
+              <div class="bg-white p-4 rounded-xl shadow-sm mb-3 flex gap-3 items-start">
+                <div class="bg-green-100 text-agropuentes-green p-2 rounded-lg text-xl">📱</div>
+                <div>
+                  <h4 class="font-bold text-sm text-gray-800">Cierre de Brecha Digital</h4>
+                  <p class="text-xs text-gray-600">Agricultores acceden a tecnología y métodos que antes solo tenían las grandes empresas.</p>
+                </div>
+              </div>
+
+              <div class="bg-white p-4 rounded-xl shadow-sm flex gap-3 items-start">
+                <div class="bg-orange-100 text-agropuentes-gold p-2 rounded-lg text-xl">🎓</div>
+                <div>
+                  <h4 class="font-bold text-sm text-gray-800">Rescate de Talento Senior</h4>
+                  <p class="text-xs text-gray-600">Profesionales +45 despliegan su experiencia en proyectos reales y dignos.</p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </header>
 
-    <!-- ¿QUÉ ES AGROPUENTES? -->
-    <section id="que-es" class="section-card fade-on-scroll que-es-section">
-      <div class="container que-es-grid">
-
-        <!-- COLUMNA IZQUIERDA: IMAGEN -->
-        <div class="que-es-side-image">
-          <img src="images/que_es.png"
-              alt="Acompañamiento agrícola de Agropuentes">
-        </div>
-
-        <!-- COLUMNA DERECHA: TEXTO -->
-        <div>
-          <div class="que-es-pill">
-            Generamos soluciones medibles para ordenar tu gestión agrícola
-          </div>
-
-          <h2 class="section-title section-title--accent">
-            ¿Qué es Agropuentes?
-          </h2>
-
-          <p class="section-sub que-es-text">
-            Agropuentes es un acompañamiento agrícola de proyectos acotados de +-30 días para ordenar y
-            clarificar tu gestión, empezando por un dolor real de tu campo: inventario, mano de obra,
-            costos, robos o compras desordenadas, no partimos hablando de software, partimos hablando de tu realidad.
+    <section id="modelo-social" class="section-card fade-on-scroll">
+      <div class="container bg-gradient-to-br from-white to-gray-50">
+        <div class="text-center mb-10">
+          <span class="pill">Nuestra Tesis de Impacto</span>
+          <h2 class="section-title">Unimos dos vulnerabilidades <br> para crear una fortaleza</h2>
+          <p class="section-sub mx-auto">
+            Agropuentes no es una consultora tradicional. Es un ecosistema diseñado para resolver dos dolores sistémicos de Chile al mismo tiempo.
           </p>
         </div>
 
-      </div>
-    </section>
-
-        <!-- SECCIÓN IMPACTO -->
-
-    <section id="impacto" class="section-card fade-on-scroll">
-      <div class="container">
-
-        <span class="pill">SInergias Agricultor + Consultor Senior</span>
-        <h2 class="section-title">Nuestro impacto</h2>
-
-        <p class="section-sub">
-          Agropuentes nace para resolver dos desafíos sociales que hoy permanecen invisibles: la vulnerabilidad operativa de agricultores pequeños y medianos, y la subutilización del talento senior con décadas de experiencia en gestión y transformación digital.
-        </p>
-
-        <div class="two-cols">
-          <div>
-            <h3 style="margin-bottom:0.4rem; font-size:1.1rem;">Agricultores vulnerables al desorden operativo</h3>
-            <p style="margin-bottom:1rem;">
-              En Chile, miles de agricultores enfrentan una carga diaria que erosiona su productividad: falta de claridad en inventarios, tareas, costos y decisiones urgentes que dependen de la memoria o del WhatsApp. Un desorden que les resta competitividad y calidad de vida.
+        <div class="grid md:grid-cols-2 gap-8 items-center relative">
+          
+          <div class="social-card border-l-4 border-agropuentes-green bg-white">
+            <div class="absolute top-4 right-4 text-4xl opacity-10">🚜</div>
+            <h3 class="text-xl font-bold text-agropuentes-green mb-2">La Brecha Digital Agrícola</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              El pequeño y mediano agricultor ha quedado <strong>excluido de la modernización</strong>. No por falta de ganas, sino por falta de acceso a metodologías simples y acompañamiento humano. Hoy dependen del papel y la memoria, restando competitividad.
             </p>
-
-            <h3 style="margin-bottom:0.4rem; font-size:1.1rem;">Consultores senior subutilizados</h3>
-            <p style="margin-bottom:1rem;">
-              Profesionales +50 con experiencia profunda en gestión, procesos y tecnologías están fuera del mercado por sesgos etarios o modelos laborales rígidos. Un capital intelectual que Chile no puede seguir perdiendo.
-            </p>
+            <div class="bg-green-50 text-agropuentes-green text-xs font-bold px-3 py-1 rounded inline-block">
+              Necesidad: Tecnología + Acompañamiento
+            </div>
           </div>
 
-          <div class="card-soft">
-            <strong>Impacto doble</strong>
-            <p style="margin-top:0.3rem;">
-              Cada proyecto de Agropuentes une necesidad y experiencia:  
-              <br>• El agricultor recupera orden, claridad y capacidad de decidir.  
-              <br>• El consultor senior encuentra un espacio digno para aportar su conocimiento.  
-              <br>• La comunidad agrícola gana productividad y resiliencia.  
-            </p>
+          <div class="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+            <div class="bg-gray-800 text-white p-3 rounded-full shadow-lg border-4 border-white">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+            </div>
           </div>
+
+          <div class="social-card border-r-4 border-agropuentes-gold bg-white text-right md:text-left">
+            <div class="absolute top-4 left-4 text-4xl opacity-10">👴🏼</div>
+            <h3 class="text-xl font-bold text-agropuentes-gold mb-2">La Brecha de Oportunidad Senior</h3>
+            <p class="text-sm text-gray-600 mb-4">
+              Expertos en gestión y transformación digital (+45 años) son desplazados del mercado laboral. Su <strong>capital intelectual está subutilizado</strong>. Tienen la metodología y la paciencia que el campo necesita, pero les falta la oportunidad.
+            </p>
+            <div class="bg-orange-50 text-agropuentes-gold text-xs font-bold px-3 py-1 rounded inline-block">
+              Necesidad: Propósito + Despliegue de experiencia
+            </div>
+          </div>
+
         </div>
 
-        <p class="section-note">
-          Este modelo aspira a convertirse en puente real, articulado con actores públicos y privados para impulsar desarrollo rural, empleo digno senior y tecnología con propósito.
-        </p>
-            <div class="impact-image">
-              <img src="images/agricultor_consultor.png"
-                  alt="Agricultor y consultor senior trabajando juntos en el campo">
-            </div>
-
-      </div>
-    </section>
-
-
-    <!-- DOS MUNDOS -->
-    <section class="two-worlds fade-on-scroll">
-      <div class="container">
-        <span class="pill">Doble Impacto (Agricultor + Consultor Senior)</span>
-        <h2 class="section-title">Dos mundos que se necesitan</h2>
-        <p class="section-sub">
-          Agricultores con desafíos reales. Consultores senior con experiencia invaluable. Agropuentes conecta ambos para que el campo gane orden y claridad, y el conocimiento senior vuelva a generar impacto.
-        </p>
-
-        <div class="two-cols">
-          <div class="two-cols-text">
-            <p>
-              Muchos agricultores pequeños y medianos están sobrecargados: demasiadas decisiones diarias,
-              poca claridad financiera y procesos que dependen de la memoria o del WhatsApp.
-            </p>
-            <p>
-              Al mismo tiempo, cientos de consultores senior (+45) —ingenieros, administradores, agrónomos—
-              tienen décadas de experiencia en gestión y transformación, pero hoy están subutilizados.
-            </p>
-            <p>
-              Cuando los conectamos, ambos ganan: el agricultor ordena su operación, y el consultor vuelve a aportar
-              donde su experiencia realmente importa.
-            </p>
-          </div>
-
-          <div class="two-cols-grid">
-            <div class="card-soft">
-              <strong>Agricultores</strong>
-              Necesitan orden, claridad y decisiones más limpias en su operación diaria.
-            </div>
-            <div class="card-soft">
-              <strong>Consultores senior</strong>
-              Tienen el criterio y la experiencia para ayudar a ordenar, pero les falta un espacio donde aplicarlo.
-            </div>
-          </div>
+        <div class="mt-10 text-center">
+          <p class="text-sm text-gray-500 italic border border-gray-200 bg-white inline-block px-5 py-2 rounded-full shadow-sm">
+            🤝 Hacemos el "match" perfecto: Metodología Senior aplicada a la Realidad Rural.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
     <section id="como-funciona" class="section-card fade-on-scroll">
       <div class="container">
-        <h2 class="section-title">Cómo funciona el piloto de 30 días</h2>
+        <h2 class="section-title">Transferencia Tecnológica en 4 Pasos</h2>
         <p class="section-sub">
-          Nada de proyectos eternos. Un ciclo corto, práctico y medible para ordenar un área crítica de tu campo.
+          No implementamos software y nos vamos. Es un proceso educativo y de acompañamiento para asegurar que la transformación digital perdure.
         </p>
 
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <div class="step-title">Elegimos tu dolor principal</div>
-            <p>
-              Conversamos y definimos qué te duele más hoy: inventario, mano de obra, costos, pérdidas o compras.
-              Ese será el foco del mes.
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+          <div class="bg-white p-5 rounded-xl border border-gray-200">
+            <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">1</div>
+            <h3 class="font-bold text-gray-800 mb-2">Diagnóstico de Madurez</h3>
+            <p class="text-sm text-gray-600">
+              Evaluamos tus procesos actuales. ¿Usas cuaderno? ¿WhatsApp? Identificamos el punto de entrada a la digitalización.
             </p>
           </div>
 
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <div class="step-title">Definimos 4 microvictorias</div>
-            <p>
-              Diseñamos cuatro avances semanales, pequeños pero concretos, que generan cambios reales desde la
-              primera semana.
+          <div class="bg-white p-5 rounded-xl border border-gray-200">
+            <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">2</div>
+            <h3 class="font-bold text-gray-800 mb-2">Match con Mentor</h3>
+            <p class="text-sm text-gray-600">
+              Te conectamos con un consultor senior especialista en tu dolor (Costos, Inventario, Procesos).
             </p>
           </div>
 
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <div class="step-title">Reunión semanal</div>
-            <p>
-              Una reunión de 25–30 minutos cada semana para ver avances, ajustar y definir la siguiente microtarea.
+          <div class="bg-white p-5 rounded-xl border border-gray-200">
+            <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">3</div>
+            <h3 class="font-bold text-gray-800 mb-2">Micro-Victorias</h3>
+            <p class="text-sm text-gray-600">
+              Implementamos herramientas digitales simples en ciclos cortos de 30 días para ver resultados inmediatos.
             </p>
           </div>
 
-          <div class="step-card">
-            <div class="step-number">4</div>
-            <div class="step-title">Cierre e informe simple</div>
-            <p>
-              Al final del mes, te mostramos qué cambió, qué quedó ordenado y qué puedes seguir mejorando.
+          <div class="bg-white p-5 rounded-xl border border-gray-200">
+            <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">4</div>
+            <h3 class="font-bold text-gray-800 mb-2">Autonomía</h3>
+            <p class="text-sm text-gray-600">
+              El objetivo final: que quedes capacitado y con el sistema andando, sin depender eternamente del consultor.
             </p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <p class="section-note">
-          Sin enredos. Sin informes que nadie lee. Trabajo práctico, orientado a decisiones.
+    <section id="dolores" class="fade-on-scroll py-12">
+      <div class="container">
+        <div class="text-center mb-10">
+          <h2 class="section-title">¿Por dónde empezamos la transformación?</h2>
+          <p class="section-sub mx-auto">Resolvemos dolores operativos reales usando tecnología accesible, acá algunos ejemplos...el problema lo pones tu, el consultor senior se ocupa!</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
+            <div class="text-4xl mb-3">📦</div>
+            <h3 class="font-bold text-gray-800">Inventario Ciego</h3>
+            <p class="text-sm text-gray-500 mt-2">Digitalizamos tu bodega para que sepas qué tienes y qué falta desde el celular.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
+            <div class="text-4xl mb-3">💸</div>
+            <h3 class="font-bold text-gray-800">Fuga de Costos</h3>
+            <p class="text-sm text-gray-500 mt-2">Estructuramos centros de costos para saber dónde ganas y dónde pierdes dinero.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
+            <div class="text-4xl mb-3">👥</div>
+            <h3 class="font-bold text-gray-800">Gestión de Labores</h3>
+            <p class="text-sm text-gray-500 mt-2">Registro digital de faenas para pagar lo justo y mejorar la productividad.</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
+            <div class="text-4xl mb-3">📊</div>
+            <h3 class="font-bold text-gray-800">Datos para Decidir</h3>
+            <p class="text-sm text-gray-500 mt-2">Transformamos notas en cuadernos en tableros de control simples.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertos" class="section-card fade-on-scroll">
+      <div class="container flex flex-col md:flex-row items-center gap-10">
+        <div class="flex-1">
+          <span class="pill bg-orange-100 text-agropuentes-gold">Talento Senior</span>
+          <h2 class="section-title">Experiencia que transforma</h2>
+          <p class="section-sub">
+            Nuestros consultores no son "juniors" aprendiendo. Son profesionales +45 (Ingenieros, Agrónomos, Administradores) que han liderado transformaciones en grandes empresas y hoy ponen ese conocimiento al servicio de la agricultura familiar y mediana.
+          </p>
+          <ul class="space-y-3 mt-4">
+            <li class="flex items-center text-sm text-gray-700">
+              <svg class="w-5 h-5 text-agropuentes-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Criterio formado en terreno, no solo teoría.
+            </li>
+            <li class="flex items-center text-sm text-gray-700">
+              <svg class="w-5 h-5 text-agropuentes-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Empatía y paciencia para enseñar tecnología.
+            </li>
+            <li class="flex items-center text-sm text-gray-700">
+              <svg class="w-5 h-5 text-agropuentes-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              Compromiso con el éxito del agricultor.
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+           <div class="bg-gray-200 rounded-2xl h-64 w-full flex items-center justify-center relative overflow-hidden">
+             <img src="images/agricultor_consultor_2.png" alt="Consultor senior enseñando a agricultor" class="absolute inset-0 w-full h-full object-cover opacity-90">
+             <div class="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-bold text-gray-800">
+               Mentores de Transformación Digital
+             </div>
+           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 border-t border-gray-200 bg-white fade-on-scroll">
+      <div class="container text-center">
+        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Hacia una Empresa B de Impacto Público</h3>
+        <p class="text-gray-500 max-w-3xl mx-auto text-sm mb-8 leading-relaxed">
+          Agropuentes opera hoy como un piloto privado de innovación social. Nuestra visión es escalar hacia un modelo sostenido por alianzas público-privadas que subsidien la digitalización del campo chileno y fomenten la empleabilidad senior calificada, generando un círculo virtuoso de desarrollo rural.
         </p>
-      </div>
-    </section>
-
-    <!-- DOLORES -->
-    <section id="dolores" class="section-card fade-on-scroll">
-      <div class="container">
-        <h2 class="section-title">¿Qué dolor trabajamos primero?</h2>
-        <p class="section-sub">
-          Cada campo tiene su propio incendio. Partimos por el tuyo.
-        </p>
-
-        <div class="pains-grid">
-          <div class="pain-card">
-            <div class="pain-title">Inventario desordenado</div>
-            <p>No tienes claridad de cuánto tienes en bodega, cuánto ni cuándo comprar o cuánto se “pierde” en el camino.</p>
-          </div>
-          <div class="pain-card">
-            <div class="pain-title">Mano de obra y labores</div>
-            <p>Tareas que se hacen pero no quedan registradas; cuesta saber quién hizo qué y cuánto costó.</p>
-          </div>
-          <div class="pain-card">
-            <div class="pain-title">Costos y flujo de caja</div>
-            <p>Trabajas mucho, pero no tienes claro cuánto estás ganando realmente por cultivo o temporada.</p>
-          </div>
-          <div class="pain-card">
-            <div class="pain-title">Robos y pérdidas invisibles</div>
-            <p>Producto que desaparece, diferencias entre lo que debería haber y lo que realmente hay.</p>
-          </div>
+        
+        <div class="flex flex-wrap justify-center gap-4 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 mb-8">
+          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">CORFO (Proyección)</div>
+          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">INDAP (Proyección)</div>
+          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">Gremios Agrícolas</div>
+          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">Privados</div>
         </div>
 
-        <div class="pains-footer">
-          Elegimos un dolor principal y lo trabajamos a fondo durante 30 días para que veas resultados medibles.
+        <div>
+          <a href="mailto:alianzas@agropuentes.cl" class="text-agropuentes-green font-semibold hover:underline text-sm">
+            ¿Representas a una institución y te interesa patrocinar este impacto? Hablemos.
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- CONSULTORES -->
-    <section id="consultores" class="consultants fade-on-scroll">
-      <div class="container">
-        <h2 class="section-title">Consultores senior con experiencia real</h2>
-        <p class="section-sub">
-          No trabajas con alguien que viene a probar. Trabajas con profesionales +45 que ya han ordenado equipos,
-          procesos y números en otros contextos.
-        </p>
-
-        <div class="consultants-grid">
-          <div>
-            <ul class="list-check">
-              <li>Experiencia en control de gestión y toma de decisiones.</li>
-              <li>Lenguaje claro, sin jerga corporativa innecesaria.</li>
-              <li>Enfoque en acompañarte, no en vender software.</li>
-              <li>Capacidad de adaptar herramientas a tu realidad específica.</li>
-            </ul>
-            <p class="impact-note">
-              Al trabajar con Agropuentes, también estás reactivando talento senior y generando impacto social:
-              un paso concreto hacia un modelo de empresa con propósito.
-            </p>
-          </div>
-
-          <div class="fake-photo">
-            <img src="images/agricultor_consultor_2.png" alt="Consultores senior de Agropuentes en terreno">
-          </div>
+    <footer class="bg-gray-50 text-gray-500 text-sm py-8">
+      <div class="container flex flex-col md:flex-row justify-between items-center gap-4">
+        <div>© <span id="year"></span> Agropuentes. Innovación Social para el Agro.</div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-agropuentes-green">Sobre Nosotros</a>
+          <a href="#" class="hover:text-agropuentes-green">Contacto</a>
         </div>
-      </div>
-    </section>
-
-    <!-- POR QUÉ -->
-    <section id="porque" class="section-card fade-on-scroll">
-      <div class="container">
-        <h2 class="section-title">¿Por qué Agropuentes?</h2>
-
-        <div class="three-cols">
-          <div class="why-card">
-            <h4>Acompañamiento humano</h4>
-            <p>No estás solo. Hay alguien que se sienta contigo, revisa tus datos y te ayuda a ordenar la casa.</p>
-          </div>
-          <div class="why-card">
-            <h4>Tecnología con sentido</h4>
-            <p>Usamos herramientas simples cuando suman, no por moda. El objetivo es simplificar, no agregar trabajo.</p>
-          </div>
-          <div class="why-card">
-            <h4>Impacto doble</h4>
-            <p>Orden para el agricultor. Trabajo digno y con propósito para consultores senior.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ES PARA TI -->
-    <section id="es-para-ti" class="section-card fade-on-scroll">
-      <div class="container">
-        <h2 class="section-title">¿Es para tu campo?</h2>
-
-        <div class="two-cols-split">
-          <div class="panel">
-            <h4>✅ Es para ti si…</h4>
-            <ul>
-              <li>Quieres más orden y claridad en tu gestión.</li>
-              <li>Tienes un problema concreto que quieres resolver ahora.</li>
-              <li>Estás dispuesto a dedicar un rato semanal.</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h4>❌ No es para ti si…</h4>
-            <ul>
-              <li>Solo quieres “ver la app” por curiosidad.</li>
-              <li>No estás dispuesto a cambiar nada de tu forma de trabajar.</li>
-              <li>Buscas soluciones mágicas sin mostrar información.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section class="cta-final fade-on-scroll">
-      <div class="container" style="max-width: 640px; box-shadow:none; background:none; padding:0;">
-        <h2 class="cta-final-title">Partamos por ordenar una sola cosa</h2>
-        <p class="cta-final-text">
-          Cuando ese dolor se aclara, el resto del campo se vuelve mucho más manejable.
-          Un mes de trabajo, un problema menos en tu cabeza.
-        </p>
-        <a href="https://wa.me/56944645774?text=Hola%2C%20quiero%20empezar%20el%20piloto%20de%2030%20d%C3%ADas%20con%20Agropuentes" target="_blank" rel="noopener">
-          <button class="btn-cta-final">💬 Quiero hablar de mi campo</button>
-        </a>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div>© <span id="year"></span> Agropuentes. Todos los derechos reservados.</div>
-        <div>Desarrollo inspirado por el impacto doble: agricultores + consultores senior.</div>
       </div>
     </footer>
 
@@ -1130,19 +446,16 @@
     // Año automático
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Animación suave al hacer scroll
+    // Animación Fade Up (Aparición suave al hacer scroll)
     const fadeEls = document.querySelectorAll('.fade-on-scroll');
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
     fadeEls.forEach(el => observer.observe(el));
   </script>
 </body>

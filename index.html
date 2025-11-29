@@ -165,24 +165,47 @@
     <div class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all">
       <div class="container" style="padding-top: 0.8rem; padding-bottom: 0.8rem;">
         
-        <nav class="flex items-center justify-between"> 
-          
-        <div class="flex items-center">
-             <a href="#inicio" class="block">
-               <img src="images/logo.png" alt="Agropuentes" class="h-28 md:h-24 w-auto object-contain">
-             </a>
-          </div> 
+        <!-- NAV CON MENÚ HAMBURGUESA -->
+        <nav class="flex items-center justify-between relative">
 
-          <div class="flex flex-wrap gap-4 text-sm font-medium">
+          <!-- LOGO -->
+          <div class="flex items-center">
+            <a href="#inicio" class="block">
+              <img src="images/logo.png" alt="Agropuentes" class="h-28 md:h-24 w-auto object-contain">
+            </a>
+          </div>
+
+          <!-- MENÚ DESKTOP -->
+          <div class="hidden md:flex gap-6 text-sm font-medium">
             <a href="#modelo-social" class="hover:text-agropuentes-green transition-colors">Modelo Social</a>
             <a href="#como-funciona" class="hover:text-agropuentes-green transition-colors">Metodología</a>
             <a href="#expertos" class="hover:text-agropuentes-green transition-colors">Red de Expertos</a>
             <a href="#dolores" class="hover:text-agropuentes-green transition-colors">Dolores</a>
           </div>
 
-          <a class="nav-cta text-xs md:text-sm px-3 py-2 md:px-5 md:py-2" href="https://wa.me/56944645774?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20saber%20m%C3%A1s" target="_blank">
+          <!-- CTA DESKTOP -->
+          <a class="nav-cta text-xs md:text-sm px-3 py-2 md:px-5 md:py-2 hidden md:inline-block" href="https://wa.me/56944645774?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20saber%20m%C3%A1s" target="_blank">
             Hablemos 📱
           </a>
+
+          <!-- BOTÓN HAMBURGUESA (MÓVIL) -->
+          <button id="menuBtn" class="md:hidden text-3xl text-agropuentes-green p-2" aria-label="Abrir menú">
+            ☰
+          </button>
+
+          <!-- MENÚ MÓVIL -->
+          <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-200 p-5 z-50">
+            <a href="#modelo-social" class="block py-2 text-gray-700 hover:text-agropuentes-green">Modelo Social</a>
+            <a href="#como-funciona" class="block py-2 text-gray-700 hover:text-agropuentes-green">Metodología</a>
+            <a href="#expertos" class="block py-2 text-gray-700 hover:text-agropuentes-green">Red de Expertos</a>
+            <a href="#dolores" class="block py-2 text-gray-700 hover:text-agropuentes-green">Dolores</a>
+
+            <a href="https://wa.me/56944645774?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20saber%20m%C3%A1s" 
+               target="_blank"
+               class="mt-4 block text-center bg-agropuentes-green text-white py-2 rounded-full font-semibold">
+               Hablemos 📱
+            </a>
+          </div>
 
         </nav>
 
@@ -457,6 +480,16 @@
       });
     }, { threshold: 0.1 });
     fadeEls.forEach(el => observer.observe(el));
+
+    // Menú hamburguesa
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
   </script>
 </body>
 </html>

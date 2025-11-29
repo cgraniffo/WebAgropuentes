@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agropuentes – Transformación Digital con Impacto Social</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Conectamos la brecha digital del agro con la experiencia de consultores senior. Un modelo de innovación social para modernizar el campo chileno.">
+
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'agropuentes-green': '#285848',
+            'agropuentes-dark': '#1F3B2B',
+            'agropuentes-light': '#F6F6F6',
+            'agropuentes-accent': '#10B981',
+            'agropuentes-gold': '#D97706',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --green-main: #285848;
+      --green-hover: #1F3B2B;
+      --gold-accent: #D97706;
+      --page-bg: #EEF3F0;
+      --text-main: #222222;
+      --text-muted: #666666;
+      --max-width: 1100px;
+      --radius-large: 20px;
+      --shadow-soft: 0 18px 45px rgba(14,40,26,0.08);
+    }
+
+    html { 
+      scroll-behavior: smooth; 
+      /* ESTA ES LA MAGIA: */
+      /* Le decimos que deje un "aire" de 140px arriba al hacer scroll */
+      /* Así la barra gigante no tapa el título */
+      scroll-padding-top: 140px; 
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--page-bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Utilitarios */
+    .container { max-width: var(--max-width); margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+    
+    header, section, footer { padding: 1.5rem 0; }
+
+    /* Estilos del CTA del Menú */
+    .nav-cta {
+      border-radius: 99px; border: 1px solid var(--green-main);
+      color: var(--green-main); font-weight: 500;
+      background: white; transition: 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--green-main); color: white; }
+
+    /* ================= HERO ================= */
+    .hero .container {
+      background: #ffffff; border-radius: var(--radius-large);
+      padding: 2.5rem 2.5rem 3rem; box-shadow: var(--shadow-soft);
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    .hero-kicker {
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--gold-accent); font-weight: 700; margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-family: 'Poppins', sans-serif; font-size: 2.5rem; line-height: 1.2;
+      margin-bottom: 1rem; color: #111;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem; color: var(--text-muted); margin-bottom: 1.5rem;
+      max-width: 580px;
+    }
+
+    .btn-primary {
+      background: var(--green-main); color: white; padding: 0.9rem 1.8rem;
+      border-radius: 99px; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;
+      transition: all 0.2s; box-shadow: 0 10px 20px rgba(40, 88, 72, 0.2);
+    }
+    .btn-primary:hover { transform: translateY(-2px); background: var(--green-hover); }
+
+    .btn-secondary {
+      background: white; color: var(--text-main); border: 1px solid #ddd;
+      padding: 0.9rem 1.8rem; border-radius: 99px; font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--green-main); color: var(--green-main); }
+
+    /* ================= SECCIONES ================= */
+    .section-card .container {
+      background: white; border-radius: var(--radius-large);
+      padding: 2rem 1.5rem; box-shadow: var(--shadow-soft);
+    }
+
+    .pill {
+      display: inline-block; font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--green-main); background: #EAF5F0;
+      padding: 0.4rem 1rem; border-radius: 99px; margin-bottom: 1rem; font-weight: 700;
+    }
+
+    .section-title {
+      font-family: 'Poppins', sans-serif; font-size: 1.8rem; margin-bottom: 1rem; color: #111;
+    }
+    
+    .section-sub { font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem; max-width: 700px; }
+
+    /* ================= TARJETAS MODELO SOCIAL ================= */
+    .social-card {
+      border: 1px solid #eee; border-radius: 16px; padding: 2rem;
+      position: relative; overflow: hidden; transition: transform 0.3s;
+    }
+    .social-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    
+    /* ================= ANIMACIONES ================= */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-on-scroll { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .fade-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+    /* Mobile Tweaks */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2rem; }
+      .hero .container, .section-card .container { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Barra superior simple con logo / link de vuelta -->
+  <header class="border-b bg-white">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo.png" alt="Agropuentes" class="h-8 w-auto">
+        <span class="font-semibold text-gray-800 text-sm md:text-base">
+          Agropuentes
+        </span>
+      </a>
+      <a href="consultor.html" class="text-xs md:text-sm text-agropuentes-green hover:underline">
+        Soy consultor senior
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="max-w-5xl mx-auto px-4 py-8 md:py-12">
+    <div class="mb-6">
+      <p class="text-xs uppercase tracking-wide text-agropuentes-green font-semibold mb-1">
+        Formulario
+      </p>
+      <h1 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
+        Registro de Agricultores
+      </h1>
+      <p class="text-gray-600 text-sm md:text-base max-w-2xl">
+        Cuéntanos quién eres y qué necesitas. Usaremos esta información para
+        conectarte con un consultor senior en transformación digital agrícola.
+      </p>
+    </div>
+
+    <!-- Tarjeta que contiene el iframe -->
+    <section class="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden">
+      <div class="px-4 py-3 md:px-6 md:py-4 border-b border-gray-100 flex items-center justify-between">
+        <span class="text-sm font-medium text-gray-800">
+          Formulario de registro
+        </span>
+        <span class="text-[11px] md:text-xs text-gray-500">
+          Tiempo estimado: 3–5 minutos
+        </span>
+      </div>
+
+      <div class="w-full">
+        <!-- AQUÍ VA TU IFRAME DE AIRTABLE (NO CAMBIES EL SRC) -->
+        <iframe
+          class="w-full min-h-[700px]"
+          src="https://airtable.com/embed/appbRmioKeAG6Y88N/shrCRc8tpYq6yGXV3"  <!-- deja aquí tu src real -->
+          frameborder="0"
+          onmousewheel=""
+          style="height: 900px;"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Botón volver al inicio -->
+    <div class="mt-6">
+      <a href="index.html"
+         class="inline-flex items-center text-sm text-gray-500 hover:text-gray-700">
+        ← Volver al inicio
+      </a>
+    </div>
+  </main>
+
+</body>
+
+</html>

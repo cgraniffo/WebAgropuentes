@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa de Patrocinio – Agropuentes</title>
+
+  <!-- Tailwind (versión CDN, igual que en tu index si la usas así) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'agropuentes-green': '#185246',
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Favicon (ajusta si tu path es distinto) -->
+  <link rel="icon" type="image/png" href="favicon-32.png" />
+
+  <style>
+    .bg-soft-green {
+      background: linear-gradient(
+        180deg,
+        rgba(24, 82, 70, 0.05) 0%,
+        rgba(24, 82, 70, 0.02) 100%
+      );
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- HEADER -->
+  <header class="border-b bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <img src="images/logo.png" alt="Agropuentes" class="h-8 w-auto" />
+        <span class="font-semibold text-sm md:text-base text-gray-800">
+          Agropuentes
+        </span>
+      </a>
+
+      <a href="index.html"
+         class="text-xs md:text-sm text-gray-500 hover:text-gray-800">
+        ← Volver al sitio principal
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-14">
+
+    <!-- HERO -->
+    <section class="mb-12 bg-soft-green rounded-3xl p-8 md:p-12 border border-agropuentes-green/10">
+      <p class="text-agropuentes-green text-xs font-semibold uppercase tracking-wide mb-3">
+        Programa de patrocinio
+      </p>
+
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Aliados para la digitalización del agro y la empleabilidad senior
+      </h1>
+
+      <p class="text-gray-700 text-base md:text-lg max-w-3xl leading-relaxed">
+        Agropuentes conecta a pequeños y medianos agricultores con consultores senior en
+        transformación digital. Buscamos instituciones y empresas que quieran impulsar
+        un impacto territorial real, con datos, propósito y resultados medibles.
+      </p>
+    </section>
+
+    <!-- QUÉ ES / UNIDAD DE IMPACTO -->
+    <section class="grid md:grid-cols-2 gap-8 mb-14">
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-7">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3">¿Qué es Agropuentes?</h2>
+        <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
+          Somos un piloto privado de innovación social que articula tres mundos:
+        </p>
+        <ul class="text-gray-700 text-sm md:text-base space-y-2">
+          <li>• Agricultores pequeños y medianos con brechas digitales significativas.</li>
+          <li>• Consultores senior con amplia experiencia, muchas veces subutilizada.</li>
+          <li>• Instituciones y empresas que quieren impulsar desarrollo rural con impacto real.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-7">
+        <h2 class="text-xl md:text-2xl font-semibold mb-3">¿Qué financia un patrocinador?</h2>
+        <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-3">
+          La unidad básica de impacto es el acompañamiento de
+          <span class="font-semibold">un agricultor durante 6 semanas</span> por parte de un consultor senior.
+        </p>
+        <ul class="text-gray-700 text-sm md:text-base space-y-2 mb-3">
+          <li>• Diagnóstico digital express.</li>
+          <li>• Plan de acción simple y realista.</li>
+          <li>• Implementación mínima viable de herramientas digitales.</li>
+          <li>• Capacitación al agricultor y su equipo.</li>
+          <li>• Cierre y registro de resultados.</li>
+        </ul>
+        <p class="text-xs text-gray-500">
+          El financiamiento incluye honorarios del consultor, coordinación del programa,
+          soporte metodológico y medición de impacto.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEPARADOR SUAVE -->
+    <div class="h-8"></div>
+    <div class="w-full h-0.5 bg-agropuentes-green/10 rounded-full"></div>
+    <div class="h-8"></div>
+
+    <!-- PROGRAMAS DE PATROCINIO -->
+    <section class="mb-14">
+      <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
+        Programas de patrocinio sugeridos
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Semilla -->
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 flex flex-col hover:shadow-xl transition">
+          <div class="text-agropuentes-green text-3xl mb-2">🌱</div>
+
+          <h3 class="text-lg font-semibold mb-1">Programa Semilla Regional</h3>
+          <p class="text-agropuentes-green text-sm font-semibold mb-3">
+            ~20 agricultores · Piloto focalizado
+          </p>
+
+          <p class="text-gray-700 text-sm leading-relaxed mb-4 flex-1">
+            Ideal para iniciar una alianza en una región concreta y probar el modelo
+            con un grupo acotado de productores.
+          </p>
+
+          <ul class="text-gray-700 text-sm space-y-1 mb-4">
+            <li>• 20 microproyectos de 6 semanas.</li>
+            <li>• 6–10 consultores senior involucrados.</li>
+            <li>• Reporte de resultados e historias destacadas.</li>
+          </ul>
+
+          <div class="text-xs text-gray-500 mt-auto pt-3 border-t border-gray-200">
+            Inversión ref: <span class="font-semibold text-agropuentes-green">CLP 10.000.000</span>
+          </div>
+        </div>
+
+        <!-- Red Territorial -->
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 flex flex-col hover:shadow-xl transition">
+          <div class="text-agropuentes-green text-3xl mb-2">🌾</div>
+
+          <h3 class="text-lg font-semibold mb-1">Programa Red Territorial</h3>
+          <p class="text-agropuentes-green text-sm font-semibold mb-3">
+            ~50 agricultores · Escala regional
+          </p>
+
+          <p class="text-gray-700 text-sm leading-relaxed mb-4 flex-1">
+            Para instituciones que buscan un programa territorial robusto, con datos
+            agregados y aprendizajes accionables.
+          </p>
+
+          <ul class="text-gray-700 text-sm space-y-1 mb-4">
+            <li>• 50 microproyectos en una o dos regiones.</li>
+            <li>• Taller de apertura y cierre.</li>
+            <li>• Panel de seguimiento simple para el sponsor.</li>
+          </ul>
+
+          <div class="text-xs text-gray-500 mt-auto pt-3 border-t border-gray-200">
+            Inversión ref: <span class="font-semibold text-agropuentes-green">CLP 25.000.000</span>
+          </div>
+        </div>
+
+        <!-- País / Alianza -->
+        <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 flex flex-col hover:shadow-xl transition">
+          <div class="text-agropuentes-green text-3xl mb-2">🇨🇱</div>
+
+          <h3 class="text-lg font-semibold mb-1">Programa País / Alianza Estratégica</h3>
+          <p class="text-agropuentes-green text-sm font-semibold mb-3">
+            ~100 agricultores · Multirregional
+          </p>
+
+          <p class="text-gray-700 text-sm leading-relaxed mb-4 flex-1">
+            Para actores que quieren liderar la agenda de digitalización rural y
+            empleabilidad senior a nivel país.
+          </p>
+
+          <ul class="text-gray-700 text-sm space-y-1 mb-4">
+            <li>• 100 microproyectos en varias regiones.</li>
+            <li>• Co-branding del programa.</li>
+            <li>• Reportes semestrales y evento anual de cierre.</li>
+          </ul>
+
+          <div class="text-xs text-gray-500 mt-auto pt-3 border-t border-gray-200">
+            Inversión ref: <span class="font-semibold text-agropuentes-green">CLP 50.000.000</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4 text-xs text-gray-500">
+        Los montos y alcances son referenciales y se ajustan según región, rubro,
+        número de agricultores y objetivos del patrocinador.
+      </p>
+    </section>
+
+    <!-- BENEFICIOS PARA EL SPONSOR -->
+    <section class="mb-14 bg-agropuentes-green/5 rounded-3xl p-8 md:p-10 border border-agropuentes-green/10">
+      <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
+        Beneficios para la institución patrocinadora
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+          <h3 class="text-lg font-semibold mb-3">Impacto social medible</h3>
+          <ul class="text-gray-700 text-sm md:text-base space-y-2">
+            <li>• Número de agricultores acompañados, por región y rubro.</li>
+            <li>• Cambios en nivel de adopción digital (antes / después).</li>
+            <li>• Historias de caso con nombre y localidad.</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+          <h3 class="text-lg font-semibold mb-3">Reputación y posicionamiento</h3>
+          <ul class="text-gray-700 text-sm md:text-base space-y-2">
+            <li>• Asociación a innovación y desarrollo rural sostenible.</li>
+            <li>• Uso conjunto de marca en comunicaciones del programa.</li>
+            <li>• Contenido para reportes de sostenibilidad y RSE.</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+          <h3 class="text-lg font-semibold mb-3">Inteligencia del territorio</h3>
+          <ul class="text-gray-700 text-sm md:text-base space-y-2">
+            <li>• Principales brechas digitales por rubro y zona.</li>
+            <li>• Necesidades recurrentes de agricultores.</li>
+            <li>• Información agregada útil para diseño de programas y productos.</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+          <h3 class="text-lg font-semibold mb-3">Empleabilidad senior y diversidad</h3>
+          <ul class="text-gray-700 text-sm md:text-base space-y-2">
+            <li>• Revalorización de consultores senior (+45) con experiencia crítica.</li>
+            <li>• Contribución concreta a inclusión laboral de talento maduro.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO AVANZAR -->
+    <section class="mb-16 bg-white rounded-2xl shadow-md border border-gray-200 p-6 md:p-8">
+      <h2 class="text-2xl font-semibold text-gray-900 mb-4">Próximos pasos</h2>
+      <p class="text-gray-700 text-sm md:text-base mb-6">
+        Diseñamos cada alianza en conjunto, pero normalmente seguimos estos pasos:
+      </p>
+
+      <div class="space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="text-agropuentes-green font-bold text-lg">1.</span>
+          <p>Reunión exploratoria para entender el foco territorial y estratégico de la institución.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-agropuentes-green font-bold text-lg">2.</span>
+          <p>Definición conjunta de número de agricultores, regiones y criterios de selección.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-agropuentes-green font-bold text-lg">3.</span>
+          <p>Diseño del programa, costos y calendario de implementación.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-agropuentes-green font-bold text-lg">4.</span>
+          <p>Firma de acuerdo y lanzamiento del programa en terreno.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="text-center mb-8">
+      <h2 class="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+        ¿Te interesa explorar una alianza con Agropuentes?
+      </h2>
+      <p class="text-gray-700 text-sm md:text-base mb-6">
+        Conversemos sobre el territorio, los agricultores y el impacto que quieres impulsar.
+      </p>
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+
+        <a href="mailto:contacto@agropuentes.cl"
+           class="inline-flex items-center bg-agropuentes-green px-7 py-3 rounded-full font-medium text-white text-sm md:text-base hover:bg-agropuentes-green/90 transition shadow-md">
+          📩 Contactar equipo Agropuentes
+        </a>
+
+        <a href="https://wa.me/56944645774?text=Hola%20quiero%20explorar%20un%20programa%20de%20patrocinio%20con%20Agropuentes"
+           target="_blank"
+           class="inline-flex items-center text-agropuentes-green hover:underline text-sm md:text-base">
+          📱 Hablar por WhatsApp
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t bg-white">
+    <div class="max-w-6xl mx-auto px-4 py-4 text-xs md:text-sm text-gray-500 flex flex-col md:flex-row items-center justify-between gap-2">
+      <span>© 2025 Agropuentes. Innovación Social para el Agro.</span>
+      <a href="index.html" class="hover:text-agropuentes-green">Volver al inicio</a>
+    </div>
+  </footer>
+
+</body>
+</html>

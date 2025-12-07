@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Agropuentes – Transformación Digital con Impacto Social</title>
+  <title>Agropuentes – Programa de Validación de Extensionismo Digital</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Conectamos la brecha digital del agro con la experiencia de consultores senior. Un modelo de innovación social para modernizar el campo chileno.">
+  <meta name="description" content="Iniciativa de innovación social para reducir la brecha digital en la agricultura familiar mediante la articulación de talento senior. Proyecto en etapa de formulación.">
 
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
@@ -52,9 +52,6 @@
 
     html { 
       scroll-behavior: smooth; 
-      /* ESTA ES LA MAGIA: */
-      /* Le decimos que deje un "aire" de 140px arriba al hacer scroll */
-      /* Así la barra gigante no tapa el título */
       scroll-padding-top: 140px; 
     }
     
@@ -165,67 +162,38 @@
     <div class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all">
       <div class="container" style="padding-top: 0.8rem; padding-bottom: 0.8rem;">
         
-        <!-- NAV CON MENÚ HAMBURGUESA -->
         <nav class="flex items-center justify-between relative">
 
-          <!-- LOGO -->
           <div class="flex items-center">
             <a href="#inicio" class="block">
               <img src="images/logo.png" alt="Agropuentes" class="h-28 md:h-24 w-auto object-contain">
             </a>
           </div>
 
-          <!-- MENÚ DESKTOP -->
           <div class="hidden md:flex gap-6 text-sm font-medium">
 
-                        <a href="agricultor.html"
-              class="bg-agropuentes-green text-white px-4 py-2 rounded-full font-semibold hover:bg-agropuentes-green/90 transition">
-              Unirme como agricultor
-            </a>
-            <a href="consultor.html"
-              class="bg-agropuentes-green text-white px-4 py-2 rounded-full font-semibold hover:bg-agropuentes-green/90 transition">
-              Unirme como consultor senior
-            </a>
-
-            <a href="#modelo-social" class="py-2 text-gray-700 hover:text-agropuentes-green transition-colors">Modelo Social</a>
+             <a href="#modelo-social" class="py-2 text-gray-700 hover:text-agropuentes-green transition-colors">Tesis de Impacto</a>
             <a href="#como-funciona" class="py-2 text-gray-700 hover:text-agropuentes-green transition-colors">Metodología</a>
-            <a href="#dolores" class="py-2 text-gray-700 hover:text-agropuentes-green transition-colors">Dolores</a>
-            <a href="#expertos" class="py-2 text-gray-700 hover:text-agropuentes-green transition-colors">Red de Expertos</a>           
-
-
+            <a href="#expertos" class="py-2 text-gray-700 hover:text-agropuentes-green transition-colors">Equipo Técnico</a>          
 
           </div>
 
-          <!-- CTA DESKTOP -->
-          <a class="nav-cta text-xs md:text-sm px-3 py-2 md:px-5 md:py-2 hidden md:inline-block" href="https://wa.me/56944645774?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20saber%20m%C3%A1s" target="_blank">
-            Hablemos 📱
+          <a class="nav-cta text-xs md:text-sm px-3 py-2 md:px-5 md:py-2 hidden md:inline-block" href="https://wa.me/56944645774?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20detalles%20de%20Agropuentes" target="_blank">
+            Hablémos 📱
           </a>
 
-          <!-- BOTÓN HAMBURGUESA (MÓVIL) -->
           <button id="menuBtn" class="md:hidden text-3xl text-agropuentes-green p-2" aria-label="Abrir menú">
             ☰
           </button>
 
-          <!-- MENÚ MÓVIL -->
           <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-white shadow-lg border-b border-gray-200 p-5 z-50">
-            <a href="#modelo-social" class="block py-2 text-gray-700 hover:text-agropuentes-green">Modelo Social</a>
+            <a href="#modelo-social" class="block py-2 text-gray-700 hover:text-agropuentes-green">Tesis de Impacto</a>
             <a href="#como-funciona" class="block py-2 text-gray-700 hover:text-agropuentes-green">Metodología</a>
-            <a href="#expertos" class="block py-2 text-gray-700 hover:text-agropuentes-green">Red de Expertos</a>
-            <a href="#dolores" class="block py-2 text-gray-700 hover:text-agropuentes-green">Dolores</a>
-            <!-- CTA Agricultor -->
-            <a href="agricultor.html"
-              class="mt-4 block text-center bg-agropuentes-green text-white py-3 rounded-full font-semibold shadow-md hover:bg-agropuentes-green/90 transition">
-              Registrarme como agricultor
-            </a>
-            <!-- CTA Consultor -->
-            <a href="consultor.html"
-              class="mt-4 block text-center bg-agropuentes-green text-white py-3 rounded-full font-semibold shadow-md hover:bg-agropuentes-green/90 transition">
-              Unirme como consultor senior
-            </a>
-            <a href="https://wa.me/56944645774?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20saber%20m%C3%A1s" 
-               target="_blank"
+            <a href="#expertos" class="block py-2 text-gray-700 hover:text-agropuentes-green">Equipo Técnico</a>
+            
+            <a href="https://wa.me/56944645774?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20detalles%20de%20Agropuentes" 
                class="mt-4 block text-center bg-agropuentes-green text-white py-2 rounded-full font-semibold">
-               Hablemos 📱
+               Hablémos 📱
             </a>
           </div>
 
@@ -240,57 +208,61 @@
         
         <div class="flex flex-col lg:flex-row gap-12 items-center mt-2">
           <div class="flex-1">
-            <div class="hero-kicker">Innovación Social + Agrícola</div>
+            <div class="hero-kicker">Programa de Validación Técnica</div>
             <h1 class="hero-title">
-              Transformación Digital <br>
-              <span class="text-agropuentes-green">con Rostro Humano</span>
+              Extensionismo Digital Agrícola<br>
+              <span class="text-agropuentes-green">con Acompañamiento Senior</span>
             </h1>
             <p class="hero-subtitle">
-              Agropuentes es el nexo entre dos mundos que se necesitan. Conectamos a <strong>agricultores</strong> que requieren modernizarse con <strong>expertos senior</strong> en transformación digital que buscan un propósito.
+              Validamos un modelo donde <strong>expertos con experiencia en Transformación Digital (+50 años)</strong> guían paso a paso a agricultores en la adopción de <strong>tecnología simple</strong>. Sin tecnicismos y con real compromiso humano.
             </p>
             
             <div class="flex flex-wrap gap-4">
               <a class="px-4 py-2 rounded-full font-medium border border-agropuentes-green 
             text-agropuentes-green hover:bg-agropuentes-green hover:text-white 
-            transition-colors duration-200" href="#modelo-social">
-                Entender el modelo
+            transition-colors duration-200" href="#como-funciona">
+                Modelo de Intervención
               </a>
-              <a class="px-4 py-2 rounded-full font-medium border border-agropuentes-green 
-            text-agropuentes-green hover:bg-agropuentes-green hover:text-white 
-            transition-colors duration-200" href="https://wa.me/56944645774?text=Hola%2C%20quiero%20digitalizar%20mi%20campo" target="_blank">
-                Quiero digitalizar mi campo
+              <a class="px-4 py-2 rounded-full font-medium bg-agropuentes-green text-white hover:bg-agropuentes-dark
+            transition-colors duration-200 shadow-md" href="agricultor.html" target="_blank">
+                Cupos Agricultores
+              </a>
+
+              <a class="px-4 py-2 rounded-full font-medium bg-agropuentes-green text-white hover:bg-agropuentes-dark
+            transition-colors duration-200 shadow-md" href="consultor.html" target="_blank">
+                Cupos Consultores
               </a>
 
             </div>
             
             <div class="mt-6 flex items-center gap-3 text-sm text-gray-500">
               <span class="flex -space-x-2">
-                <div class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-xs text-white font-bold">N</div>
-                <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-white flex items-center justify-center text-xs text-white font-bold">P</div>
-                <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-white flex items-center justify-center text-xs text-white font-bold">C</div>
-                <div class="w-8 h-8 rounded-full bg-agropuentes-green border-2 border-white flex items-center justify-center text-xs text-white font-bold">+50</div>
+                <div class="w-8 h-8 rounded-full bg-agropuentes-green border-2 border-white flex items-center justify-center text-xs text-white font-bold">N</div>
+                <div class="w-8 h-8 rounded-full bg-agropuentes-green border-2 border-white flex items-center justify-center text-xs text-white font-bold">P</div>
+                <div class="w-8 h-8 rounded-full bg-agropuentes-green border-2 border-white flex items-center justify-center text-xs text-white font-bold">C</div>
+                <div class="w-8 h-8 rounded-full bg-gray-400 border-2 border-white flex items-center justify-center text-xs text-white font-bold">+40</div>
               </span>
-              <span>Únete a agricultores y consultores generando impacto.</span>
+              <span>Proyecto en etapa de formulación técnica.</span>
             </div>
           </div>
 
           <div class="flex-1 w-full max-w-md">
             <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm">
-              <h3 class="font-bold text-gray-800 mb-4">¿Qué logramos juntos?</h3>
+              <h3 class="font-bold text-gray-800 mb-4">Resultados Esperados del Bien Público</h3>
               
               <div class="bg-white p-4 rounded-xl shadow-sm mb-3 flex gap-3 items-start">
-                <div class="bg-green-100 text-agropuentes-green p-2 rounded-lg text-xl">📱</div>
+                <div class="bg-green-100 text-agropuentes-green p-2 rounded-lg text-xl">📘</div>
                 <div>
-                  <h4 class="font-bold text-sm text-gray-800">Cierre de Brecha Digital Agrícola</h4>
-                  <p class="text-xs text-gray-600">Agricultores acceden a tecnología y métodos que antes solo tenían las grandes empresas, impulsando su profesionalización y aportando a su calidad de vida.</p>
+                  <h4 class="font-bold text-sm text-gray-800">Protocolos de Adopción</h4>
+                  <p class="text-xs text-gray-600">Validación de metodologías de transferencia tecnológica de código abierto para replicabilidad en la pequeña y mediana agricultura.</p>
                 </div>
               </div>
 
               <div class="bg-white p-4 rounded-xl shadow-sm flex gap-3 items-start">
-                <div class="bg-orange-100 text-agropuentes-gold p-2 rounded-lg text-xl">🎓</div>
+                <div class="bg-orange-100 text-agropuentes-gold p-2 rounded-lg text-xl">📊</div>
                 <div>
-                  <h4 class="font-bold text-sm text-gray-800">Rescate de Talento Senior con propósito</h4>
-                  <p class="text-xs text-gray-600">Profesionales +50 despliegan su experiencia en proyectos reales y dignos, reinsertandose y sintiendose valorados profesional y personalmente.</p>
+                  <h4 class="font-bold text-sm text-gray-800">Data Territorial</h4>
+                  <p class="text-xs text-gray-600">Levantamiento de indicadores de madurez digital y brechas de gestión en predios de la región.</p>
                 </div>
               </div>
 
@@ -303,10 +275,10 @@
     <section id="modelo-social" class="section-card fade-on-scroll">
       <div class="container bg-gradient-to-br from-white to-gray-50">
         <div class="text-center mb-10">
-          <span class="pill">Nuestra Tesis de Impacto</span>
-          <h2 class="section-title">Unir dos vulnerabilidades <br> para crear una gran fortaleza</h2>
+          <span class="pill">Fundamentos del Proyecto</span>
+          <h2 class="section-title">Resolviendo una Falla de Coordinación</h2>
           <p class="section-sub mx-auto">
-            Agropuentes no es una consultora tradicional, es un ecosistema diseñado para resolver dos dolores sistémicos actuales en Chile al mismo tiempo.
+            El proyecto aborda dos problemáticas sistémicas mediante un modelo de economía colaborativa y circularidad del conocimiento.
           </p>
         </div>
 
@@ -314,12 +286,12 @@
           
           <div class="social-card border-l-4 border-agropuentes-green bg-white">
             <div class="absolute top-4 right-4 text-4xl opacity-10">🚜</div>
-            <h3 class="text-xl font-bold text-agropuentes-green mb-2">La Brecha Digital Agrícola</h3>
+            <h3 class="text-xl font-bold text-agropuentes-green mb-2">Brecha Digital agrícola</h3>
             <p class="text-sm text-gray-600 mb-4">
-              El pequeño y mediano agricultor ha quedado <strong>excluido de la modernización</strong>. No por falta de ganas, sino por <strong>falta de acceso a metodologías simples y acompañamiento humano</strong>. Hoy dependen del papel y la memoria, restando competitividad.
+              La agricultura familiar no adopta tecnología por falta de herramientas, sino por <strong>altos costos de transacción y curvas de aprendizaje</strong> no asistidas. Los modelos actuales carecen de "traducción tecnológica".
             </p>
             <div class="bg-green-50 text-agropuentes-green text-xs font-bold px-3 py-1 rounded inline-block">
-              Necesidad: Tecnología + Acompañamiento
+              Foco: Validación de Protocolos
             </div>
           </div>
 
@@ -331,54 +303,48 @@
 
           <div class="social-card border-r-4 border-agropuentes-gold bg-white text-right md:text-left">
             <div class="absolute top-4 left-4 text-4xl opacity-10">👴🏼</div>
-            <h3 class="text-xl font-bold text-agropuentes-gold mb-2">La Brecha de Oportunidad Senior</h3>
+            <h3 class="text-xl font-bold text-agropuentes-gold mb-2">Capital Humano Senior</h3>
             <p class="text-sm text-gray-600 mb-4">
-              Expertos en gestión y transformación digital (+50 años), con mucha experiencia son desplazados del mercado laboral. Su <strong>capital intelectual está subutilizado</strong>. Tienen la metodología y la paciencia que el campo necesita, pero les faltan <strong>oportunidades</strong> para desplegar su experiencia y conocimiento.
+              Existe un excedente de profesionales expertos (+50 años) subutilizados. Su <strong>conocimiento tácito</strong> y habilidades blandas son el recurso más eficiente para reducir la resistencia al cambio en el agro.
             </p>
             <div class="bg-orange-50 text-agropuentes-gold text-xs font-bold px-3 py-1 rounded inline-block">
-              Necesidad: Propósito + Despliegue de experiencia
+              Foco: Activación de Expertos
             </div>
           </div>
 
-        </div>
-
-        <div class="mt-10 text-center">
-          <p class="text-sm text-gray-500 italic border border-gray-200 bg-white inline-block px-5 py-2 rounded-full shadow-sm">
-            🤝 Hacemos el "match" perfecto: Metodología Senior aplicada a la Realidad Rural, potenciando la digitalización y transformación digital del campo Chileno.
-          </p>
         </div>
       </div>
     </section>
 
     <section id="como-funciona" class="section-card fade-on-scroll">
       <div class="container">
-        <h2 class="section-title">Transferencia Tecnológica en 4 Pasos</h2>
+        <h2 class="section-title">Etapas del Modelo de Intervención</h2>
         <p class="section-sub">
-          No implementamos software y nos vamos. Es un proceso educativo y de acompañamiento para asegurar que la transformación digital perdure.
+          Metodología estandarizada de 4 pasos para asegurar la adopción tecnológica sostenible y escalable.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
           <div class="bg-white p-5 rounded-xl border border-gray-200">
             <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">1</div>
-            <h3 class="font-bold text-gray-800 mb-2">Diagnóstico de Madurez</h3>
+            <h3 class="font-bold text-gray-800 mb-2">Levantamiento</h3>
             <p class="text-sm text-gray-600">
-              Evaluamos tus procesos actuales. ¿Usas cuaderno? ¿WhatsApp? Identificamos el punto de entrada a la digitalización.
+              Diagnóstico de brechas de madurez digital y productiva para establecer línea base.
             </p>
           </div>
 
           <div class="bg-white p-5 rounded-xl border border-gray-200">
             <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">2</div>
-            <h3 class="font-bold text-gray-800 mb-2">Match con Mentor</h3>
+            <h3 class="font-bold text-gray-800 mb-2">Vinculación</h3>
             <p class="text-sm text-gray-600">
-              Te conectamos con un consultor senior especialista en tu dolor (Costos, Inventario, Procesos).
+              Asignación algorítmica de Mentor Senior según especialidad (Gestión, Procesos, Costos).
             </p>
           </div>
 
           <div class="bg-white p-5 rounded-xl border border-gray-200">
             <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">3</div>
-            <h3 class="font-bold text-gray-800 mb-2">Micro-Victorias</h3>
+            <h3 class="font-bold text-gray-800 mb-2">Transferencia</h3>
             <p class="text-sm text-gray-600">
-              Implementamos herramientas digitales simples en ciclos cortos de 30 días para ver resultados inmediatos.
+              Implementación asistida de "Kit Digital" (Herramientas de bajo costo y alta usabilidad).
             </p>
           </div>
 
@@ -386,40 +352,8 @@
             <div class="w-10 h-10 bg-agropuentes-green text-white rounded-full flex items-center justify-center font-bold mb-3">4</div>
             <h3 class="font-bold text-gray-800 mb-2">Autonomía</h3>
             <p class="text-sm text-gray-600">
-              El objetivo final: que quedes capacitado y con el sistema andando, sin depender eternamente del consultor.
+              Validación de capacidades instaladas y retiro programado del consultor.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="dolores" class="fade-on-scroll py-12">
-      <div class="container">
-        <div class="text-center mb-10">
-          <h2 class="section-title">¿Por dónde empezamos la transformación?</h2>
-          <p class="section-sub mx-auto">Resolvemos dolores operativos reales usando tecnología accesible, acá algunos ejemplos...el problema lo pones tu, el consultor senior se ocupa!</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
-            <div class="text-4xl mb-3">📦</div>
-            <h3 class="font-bold text-gray-800">Inventario Ciego</h3>
-            <p class="text-sm text-gray-500 mt-2">Digitalizamos tu bodega para que sepas qué tienes y qué falta desde el celular.</p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
-            <div class="text-4xl mb-3">💸</div>
-            <h3 class="font-bold text-gray-800">Fuga de Costos</h3>
-            <p class="text-sm text-gray-500 mt-2">Estructuramos centros de costos para saber dónde ganas y dónde pierdes dinero.</p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
-            <div class="text-4xl mb-3">👥</div>
-            <h3 class="font-bold text-gray-800">Gestión de Labores</h3>
-            <p class="text-sm text-gray-500 mt-2">Registro digital de faenas para pagar lo justo y mejorar la productividad.</p>
-          </div>
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:border-agropuentes-green transition-colors cursor-default">
-            <div class="text-4xl mb-3">📊</div>
-            <h3 class="font-bold text-gray-800">Datos para Decidir</h3>
-            <p class="text-sm text-gray-500 mt-2">Transformamos notas en cuadernos en tableros de control simples.</p>
           </div>
         </div>
       </div>
@@ -428,41 +362,32 @@
     <section id="expertos" class="section-card fade-on-scroll">
       <div class="container flex flex-col md:flex-row items-center gap-10">
         <div class="flex-1">
-          <span class="pill bg-orange-100 text-agropuentes-gold">Talento Senior</span>
-          <h2 class="section-title">Experiencia que transforma</h2>
+          <span class="pill bg-orange-100 text-agropuentes-gold">Recurso Clave</span>
+          <h2 class="section-title">Red de Expertos Senior</h2>
           <p class="section-sub">
-            Nuestros consultores no son "juniors" aprendiendo. Son profesionales +50 (Ingenieros, Agrónomos, Administradores) que han liderado transformaciones en grandes empresas y hoy ponen ese conocimiento al servicio de la agricultura familiar y mediana.
+            El proyecto validará el uso de profesionales +50 (Ingenieros, Agrónomos, Administradores) como agentes de cambio tecnológico, aprovechando su experiencia en gestión para disminuir la fricción de adopción en Pymes agrícolas.
           </p>
           <ul class="space-y-3 mt-4">
             <li class="flex items-center text-sm text-gray-700">
               <svg class="w-5 h-5 text-agropuentes-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Criterio formado en terreno, no solo teoría.
+              Transferencia de conocimiento tácito.
             </li>
             <li class="flex items-center text-sm text-gray-700">
               <svg class="w-5 h-5 text-agropuentes-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Empatía y paciencia para enseñar tecnología.
-            </li>
-            <li class="flex items-center text-sm text-gray-700">
-              <svg class="w-5 h-5 text-agropuentes-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-              Compromiso con el éxito del agricultor.
+              Metodología basada en empatía y experiencia.
             </li>
           </ul>
-                      <a href="agricultor.html"
-              class="mt-4 block text-center bg-agropuentes-green text-white py-3 rounded-full font-semibold shadow-md hover:bg-agropuentes-green/90 transition">
-              Registrarme como agricultor
-            </a>
-            <!-- CTA Consultor -->
-            <a href="consultor.html"
-              class="mt-4 block text-center bg-agropuentes-green text-white py-3 rounded-full font-semibold shadow-md hover:bg-agropuentes-green/90 transition">
-              Unirme como consultor senior
-            </a>
+          
+          <div class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg">
+             <p class="text-xs text-gray-500"><strong>Nota:</strong> El registro de nuevos consultores se encuentra abierto pero a la espera de la adjudicación de fondos para la etapa piloto.</p>
+          </div>
           
         </div>
         <div class="flex-1">
            <div class="bg-gray-200 rounded-2xl h-64 w-full flex items-center justify-center relative overflow-hidden">
              <img src="images/agricultor_consultor_2.png" alt="Consultor senior enseñando a agricultor" class="absolute inset-0 w-full h-full object-cover opacity-90">
              <div class="absolute bottom-4 left-4 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-bold text-gray-800">
-               Mentores de Transformación Digital
+               Extensionismo digital agrícola
              </div>
            </div>
         </div>
@@ -471,35 +396,36 @@
 
     <section class="py-16 border-t border-gray-200 bg-white fade-on-scroll">
       <div class="container text-center">
-        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Hacia una Empresa de Impacto Público</h3>
+        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Hacia una Política Pública Escalable</h3>
         <p class="text-gray-500 max-w-3xl mx-auto text-sm mb-8 leading-relaxed">
-          Agropuentes opera hoy como un piloto privado de innovación social. Nuestra visión es escalar hacia un modelo sostenido por alianzas público-privadas que subsidien la digitalización del campo chileno y fomenten la empleabilidad senior calificada, generando un círculo virtuoso de desarrollo rural.
+          Agropuentes opera como una iniciativa privada de diseño de Bien Público. Nuestra visión es validar este modelo para su posterior transferencia a mandantes públicos (GORE/INDAP/CORFO), generando un círculo virtuoso de desarrollo rural y empleabilidad senior.
         </p>
         
-        <div class="flex flex-wrap justify-center gap-4 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 mb-8">
-          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">CORFO (Proyección)</div>
-          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">INDAP (Proyección)</div>
-          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">Gremios Agrícolas</div>
-          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">Empresas Privadas</div>
+        <div class="flex flex-wrap justify-center gap-4 opacity-50 grayscale transition-all duration-500 mb-8">
+          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">CORFO, INDAP, INIA, OTROS</div>
+          <div class="border border-dashed border-gray-300 px-4 py-2 rounded text-xs font-semibold text-gray-400">GORE (Territorios)</div>
         </div>
 
         <div>
          <p class="text-gray-800 text-base md:text-lg mb-6">
-      ¿Representas a una institución o empresa y te interesa patrocinar este impacto?
-      <span class="font-semibold text-agropuentes-green">Hablemos.</span>
+          ¿Representas a una institución interesada en los resultados del piloto?
+      <span class="font-semibold text-agropuentes-green">Contáctanos.</span>
     </p>
 
-          <a class="nav-cta text-xs md:text-sm px-3 py-2 md:px-5 md:py-2 hidden md:inline-block" href="https://wa.me/56944645774?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20saber%20m%C3%A1s" target="_blank">
-            Contactar a equipo Agropuentes 📱
+          <a class="nav-cta text-xs md:text-sm px-3 py-2 md:px-5 md:py-2 hidden md:inline-block" href="https://wa.me/56944645774?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20detalles%20de%20Agropuentes
+" target="_blank">
+            Hablémos 📱
           </a> 
         </div>
       </div>
     </section>
 
-    <footer class="bg-gray-50 text-gray-500 text-sm py-8">
-      <div class="container flex flex-col md:flex-row justify-between items-center gap-4">
-        <div>© <span id="year"></span> Agropuentes. Innovación Social para el Agro.</div>
- 
+    <footer class="bg-gray-50 text-gray-500 text-xs py-8 border-t border-gray-200">
+      <div class="container flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <div>© <span id="year"></span> Agropuentes.</div>
+        <div class="max-w-xl">
+           <p><strong>Importante:</strong> Agropuentes es una iniciativa privada de innovación social actualmente en proceso de formulación para instrumentos de fomento productivo. Este sitio web tiene fines informativos de validación técnica y no constituye una oferta comercial vinculante. El inicio de operaciones del piloto está sujeto a la disponibilidad de cofinanciamiento público.</p>
+        </div>
       </div>
     </footer>
 
@@ -509,7 +435,7 @@
     // Año automático
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Animación Fade Up (Aparición suave al hacer scroll)
+    // Animación Fade Up
     const fadeEls = document.querySelectorAll('.fade-on-scroll');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
